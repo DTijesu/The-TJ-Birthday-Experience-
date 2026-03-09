@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TIJESUNIMI — A Royal Celebration</title>
+  <link rel="stylesheet" href="birthday.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════
+       PRELOADER
+  ══════════════════════════════════ -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__bg"></div>
+    <div class="preloader__inner">
+      <div class="preloader__rings">
+        <div class="pre-ring pre-ring--1"></div>
+        <div class="pre-ring pre-ring--2"></div>
+        <div class="pre-ring pre-ring--3"></div>
+      </div>
+      <div class="preloader__text">
+        <span class="preloader__name" id="preloaderName">TIJESUNIMI</span>
+        <span class="preloader__tagline">A Royal Celebration</span>
+      </div>
+    </div>
+    <div class="preloader__bar-wrap">
+      <div class="preloader__bar" id="preloaderBar"></div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       BACKGROUND MUSIC
+  ══════════════════════════════════ -->
+  <audio id="bgMusic" loop>
+    <source src="bf.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Music Toggle -->
+  <button class="music-btn" id="musicToggle" aria-label="Toggle music" title="Toggle music">
+    <span class="music-icon music-icon--on" id="iconOn">♪</span>
+    <span class="music-icon music-icon--off" id="iconOff" style="display:none">♩</span>
+  </button>
+
+  <!-- ══════════════════════════════════
+       HERO
+  ══════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <!-- Particle canvas -->
+    <canvas class="hero__canvas" id="heroCanvas"></canvas>
+
+    <!-- Depth orbs -->
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+    <div class="orb orb--4"></div>
+
+    <div class="hero__content">
+      <p class="hero__date">✦ 9th March ✦</p>
+      <h1 class="hero__name">
+        <span class="hn-top">BALOGUN</span>
+        <span class="hn-mid">Comfort <em>Favour</em></span>
+      </h1>
+      <div class="hero__rule">
+        <span class="hr-line"></span>
+        <span class="hr-gem">◆</span>
+        <span class="hr-line"></span>
+      </div>
+      <p class="hero__alias">Call me <strong>TIJESUNIMI</strong></p>
+      <p class="hero__sub">A Royal Celebration</p>
+      <a href="#message" class="hero__cta">
+        <span class="cta-label">Enter My World</span>
+        <span class="cta-glow"></span>
+      </a>
+    </div>
+
+    <div class="hero__scroll-hint">
+      <div class="scroll-wire"></div>
+      <p>Scroll</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       DIVIDER
+  ══════════════════════════════════ -->
+  <div class="sec-divider" aria-hidden="true">
+    <span class="sd-line"></span><span class="sd-gem">✦</span><span class="sd-line"></span>
+  </div>
+
+  <!-- ══════════════════════════════════
+       S1: PERSONAL MESSAGE
+  ══════════════════════════════════ -->
+  <section class="section-pad" id="message">
+    <div class="container">
+      <p class="sec-label reveal-up">From My Heart</p>
+      <h2 class="sec-title reveal-up" style="--d:.1s">A Personal <em>Note</em></h2>
+      <div class="gold-hr reveal-up" style="--d:.2s"></div>
+
+      <div class="msg-card reveal-up" style="--d:.3s">
+        <span class="msg-deco" aria-hidden="true">❝</span>
+        <p class="msg-body">
+          This year represents elevation, grace, and intentional growth.
+          Thank you for being part of my journey.
+          Today, I celebrate purpose — and <strong>YOU</strong>.
+        </p>
+        <p class="msg-sig">— TIJESUNIMI</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="sec-divider" aria-hidden="true">
+    <span class="sd-line"></span><span class="sd-gem">◈</span><span class="sd-line"></span>
+  </div>
+
+  <!-- ══════════════════════════════════
+       S2: IMAGE SLIDER
+  ══════════════════════════════════ -->
+  <section class="section-pad" id="gallery">
+    <div class="container">
+      <p class="sec-label reveal-up">Captured Moments</p>
+      <h2 class="sec-title reveal-up" style="--d:.1s">The <em>Gallery</em></h2>
+      <div class="gold-hr reveal-up" style="--d:.2s"></div>
+    </div>
+
+    <div class="slider-shell reveal-up" style="--d:.3s">
+      <div class="slider" id="imgSlider">
+
+        <div class="img-card">
+          <div class="img-card__frame">
+            <div class="I.">
+              <img src="b1.png" alt="Golden Hour">
+              <span class="ph-label">Photo 1</span>
+            </div>
+          </div>
+          <div class="img-card__foot">
+            <p class="img-card__cap">Eternal Excellence</p>
+            <button class="dl-btn" data-name="eternal-excellence">⬇ Download</button>
+          </div>
+        </div>
+
+        <div class="img-card">
+          <div class="img-card__frame">
+              <img src="b2.png" alt="Royal Grace">
+            <div class="img-placeholder img-ph--2">
+              <span class="ph-label">Photo 2</span>
+            </div>
+          </div>
+          <div class="img-card__foot">
+            <p class="img-card__cap">Royal Grace</p>
+            <button class="dl-btn" data-name="royal-grace">⬇ Download</button>
+          </div>
+        </div>
+
+        <div class="img-card">
+          <div class="img-card__frame">
+              <img src="b3.png" alt="Crowned Glory">
+            <div class="img-placeholder img-ph--3">
+              <span class="ph-label">Photo 3</span>
+            </div>
+          </div>
+          <div class="img-card__foot">
+            <p class="img-card__cap">Crowned Glory</p>
+            <button class="dl-btn" data-name="crowned-glory">⬇ Download</button>
+          </div>
+        </div>
+
+        <div class="img-card">
+          <div class="img-card__frame">
+              <img src="b4.jpg" alt="Eternal Bloom">
+            <div class="img-placeholder img-ph--4">
+              <span class="ph-label">Photo 4</span>
+            </div>
+          </div>
+          <div class="img-card__foot">
+            <p class="img-card__cap">Light(an oldie)</p>
+            <button class="dl-btn" data-name="light(an-oldie)">⬇ Download</button>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="sl-arrow sl-arrow--l" id="imgPrev">‹</button>
+      <button class="sl-arrow sl-arrow--r" id="imgNext">›</button>
+      <div class="sl-dots" id="imgDots"></div>
+    </div>
+  </section>
+
+  <div class="sec-divider" aria-hidden="true">
+    <span class="sd-line"></span><span class="sd-gem">✦</span><span class="sd-line"></span>
+  </div>
+
+  <!-- ══════════════════════════════════
+       S3: WISHLIST SLIDER
+  ══════════════════════════════════ -->
+  <section class="section-pad" id="wishlist">
+    <div class="container">
+      <p class="sec-label reveal-up">Celebrate With Me</p>
+      <h2 class="sec-title reveal-up" style="--d:.1s">This Season's <em>Wishlist</em></h2>
+      <div class="gold-hr reveal-up" style="--d:.2s"></div>
+    </div>
+
+    <div class="slider-shell reveal-up" style="--d:.3s">
+      <div class="slider" id="wishSlider">
+
+        <div class="wish-card">
+          
+          <img src="laptop.jpeg" alt="Laptop">
+          <h3>A Laptop</h3>
+          <p>For ease of working because productivity is key.
+          Model: Dell Inspiron 15 3520 (and above)</p>
+        </div>
+        <div class="wish-card">
+          <img src="books.jpeg" alt="Books">
+          <h3>Books for Growth</h3>
+          <p>Titles on productivity, creativity, finance and spirituality.</p>
+        </div>
+        <div class="wish-card">
+          <img src="sneakers.jpg" alt="Sneakers">
+          <h3>Pairs of Sneakers (Size 40/41)</h3>
+          <p>This Church Media girl needs some nice kicks to go about her duties. What does the Bible say about the feet again? <b>
+              <p>Beautiful!</p>
+          </b></p>
+        </div>
+        <div class="wish-card">
+          <img src="fine.jpg" alt="Fine Dining">
+          <h3>Beautiful Experiences</h3>
+          <p>Dinners, adventures etc. Especially after all these back-to-back engagements I've had, I need fine dining and loads of pampering.</p>
+        </div>
+        <div class="wish-card">
+          <img src="prayer.jpeg" alt="Prayers">
+          <h3>Your Prayers</h3>
+          <p>The most precious gift of all is your heart lifted in sincere prayer for me.</p>
+        </div>
+
+      </div>
+      <button class="sl-arrow sl-arrow--l" id="wishPrev">‹</button>
+      <button class="sl-arrow sl-arrow--r" id="wishNext">›</button>
+      <div class="sl-dots" id="wishDots"></div>
+    </div>
+  </section>
+
+  <div class="sec-divider" aria-hidden="true">
+    <span class="sd-line"></span><span class="sd-gem">◈</span><span class="sd-line"></span>
+  </div>
+
+  <!-- ══════════════════════════════════
+       S4: VIDEO MESSAGE
+  ══════════════════════════════════ -->
+  <section class="section-pad" id="video">
+    <div class="container">
+      <p class="sec-label reveal-up">A Video Gift from Me to You</p>
+      <h2 class="sec-title reveal-up" style="--d:.1s">A Video <em>Message</em></h2>
+      <div class="gold-hr reveal-up" style="--d:.2s"></div>
+      <div class="video-wrap reveal-up" style="--d:.3s">
+        <div class="video-glow-ring"></div>
+        <video class="bdvideo" controls preload="metadata">
+          <source src="Main.mp4" type="video/mp4">
+          Your browser does not support this video.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <div class="sec-divider" aria-hidden="true">
+    <span class="sd-line"></span><span class="sd-gem">✦</span><span class="sd-line"></span>
+  </div>
+
+  <!-- ══════════════════════════════════
+       S5: BANK TRANSFER CARD
+  ══════════════════════════════════ -->
+  <section class="section-pad" id="bank">
+    <div class="container">
+      <p class="sec-label reveal-up">Want to send cash gift?</p>
+      <h2 class="sec-title reveal-up" style="--d:.1s">Bank <em>Transfer</em></h2>
+      <div class="gold-hr reveal-up" style="--d:.2s"></div>
+
+      <div class="bank-card reveal-up" style="--d:.3s" id="bankCard">
+        <!-- Holographic tilt shine -->
+        <div class="bank-shine" id="bankShine"></div>
+
+        <div class="bank-top">
+          <div class="bank-chip"><div class="chip-grid"></div></div>
+          <div class="bank-logo">T</div>
+        </div>
+
+        <div class="bank-fields">
+          <div class="bank-row">
+            <span class="bk-label">Bank</span>
+            <span class="bk-val">United Bank for Africa (UBA)</span>
+          </div>
+          <div class="bank-row">
+            <span class="bk-label">Account Name</span>
+            <span class="bk-val">BALOGUN Comfort Favour</span>
+          </div>
+          <div class="bank-row bank-row--num">
+            <span class="bk-label">Account Number</span>
+            <div class="bank-num-row">
+              <span class="bk-val bk-num" id="accNum">2102973871</span>
+              <button class="copy-btn" id="copyBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copy
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="copy-toast" id="copyToast">
+          Copied 💜 Thank you for celebrating me!
+        </div>
+      </div>
+
+      <!-- Sparkle canvas overlay -->
+      <canvas class="sparkle-canvas" id="sparkleCanvas"></canvas>
+    </div>
+  </section>
+
+  <div class="sec-divider" aria-hidden="true">
+    <span class="sd-line"></span><span class="sd-gem">◈</span><span class="sd-line"></span>
+  </div>
+
+  <!-- ══════════════════════════════════
+       S6: CONTACT + BRANDING
+  ══════════════════════════════════ -->
+  <section class="section-pad" id="contact">
+    <div class="container">
+      <p class="sec-label reveal-up">Connect</p>
+      <h2 class="sec-title reveal-up" style="--d:.1s">Let's Build Something <em>Beautiful</em></h2>
+      <div class="gold-hr reveal-up" style="--d:.2s"></div>
+
+      <div class="cta-group reveal-up" style="--d:.3s">
+        <a href="mailto: bcomfortfavour@gmail.com" class="cta-pill cta-pill--email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Send an Email
+        </a>
+        <a href="https://wa.me/2348115526431" target="_blank" rel="noopener" class="cta-pill cta-pill--wa">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.555 4.103 1.523 5.824L0 24l6.344-1.503A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.015-1.375l-.36-.214-3.727.977.994-3.629-.234-.373A9.779 9.779 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+          WhatsApp Me
+        </a>
+      </div>
+
+      <div class="brand-note reveal-up" style="--d:.5s">
+        <div class="brand-rule"><span></span><span class="br-gem">◆</span><span></span></div>
+        <p>Built with elegance by <strong>TIJESUNIMI</strong>.</p>
+        <p><em>If this moved you, imagine what I can build for your brand.</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
+  <footer class="footer">
+    <div class="ftr-glow"></div>
+    <div class="container">
+      <p class="ftr-mono">T</p>
+      <p class="ftr-copy">© 2026 TIJESUNIMI · Crafted with devotion · 9th March</p>
+    </div>
+  </footer>
+
+  <script src="birthday.js"></script>
+</body>
+</html>
